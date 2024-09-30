@@ -6,6 +6,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
+static String pathBase = "/Users/colinwang/Downloads/Graphics/";
 int main()
 {
     VideoMode vm(1920, 1080);
@@ -14,7 +15,7 @@ int main()
     Bat bat(1920 / 2-150, 1080 - 80, 300, 100);
     Ball ball(0,0,0,0,0,0);
     Font font;
-    font.loadFromFile("/Users/colinwang/Downloads/KOMIKAP_.ttf");
+    font.loadFromFile(pathBase+"KOMIKAP_.ttf");
     Text pauseText;
     Text scoreText;
     pauseText.setFont(font);
@@ -91,7 +92,7 @@ int main()
     hard.setPosition(1070, 525);
 
     Texture texturepong;
-    texturepong.loadFromFile("/Users/colinwang/Downloads/pong.jpeg");
+    texturepong.loadFromFile(pathBase+"Pong.jpeg");
     Sprite spritePong;
     spritePong.setTexture(texturepong);
     spritePong.setScale(1,1);
